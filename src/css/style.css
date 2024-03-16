@@ -5,7 +5,7 @@
 }
 
 :root {
-  font-size: clamp(40%, 1% + 2vw,  62.5%);
+  font-size: clamp(40%, 1% + 2vw, 62.5%);
 
 
   /* Variaveis de cores*/
@@ -22,7 +22,7 @@ html.light {
   --hue: 194;
   --text-color: hsl(var(--hue), 5%, 7%);
   --bg-color: hsl(var(--hue), 40%, 98%);
-  --controls-bg-color: hsl(var(--hue), 0%, 14%)  
+  --controls-bg-color: hsl(var(--hue), 0%, 14%)
 }
 
 html.light .ph-sun,
@@ -101,15 +101,12 @@ button {
 
 .running .ph-play-circle,
 .running .ph-timer,
-.music-on .ph-speaker-none,
+.music-on .ph-speaker-high,
 html:not(.running) .ph-pause-circle,
 html:not(.running) .ph-stop-circle,
-html:not(.running) .pg-speaker-high {
+html:not(.music-on) .ph-speaker-none {
   display: none;
 }
 
 
-html.light {
-
-}
-
+html.light {}

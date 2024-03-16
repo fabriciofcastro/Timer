@@ -1,12 +1,12 @@
 <!DOCTYPE html>
-<html lang="pr-br" class="running light" >
+<html lang="pr-br">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="./css/style.css">
+  <link rel="stylesheet" href="./src/css/style.css">
   <link rel="shortcut icon" href="./assets/image/favicon.svg" type="image/x-svg">
   <script src="https://unpkg.com/@phosphor-icons/web"></script>
-  <script src="./js/index.js" type="module" defer></script>
+  <script type="module" src="./src/js/index.js" defer></script>
   <title>Timer</title>
 </head>
 <body>
@@ -25,22 +25,23 @@
     </section>
 
     <section id="controls" class="flex">
-      <button class="ph ph-play-circle">
-       <span class="sr-only"> Inicar contador</span>
+      <button data-action="toggleRunning" class="ph ph-play-circle">
+        <span class="sr-only"> Iniciar contador</span>
        </button>
-      <button class="ph ph-pause-circle">
+      <button data-action="toggleRunning" class="ph ph-pause-circle">
         <span class="sr-only">Pausar contador</span>
       </button>
-      <button class="ph .ph-speaker-none">
+      <button data-action="set" class="ph ph-timer secondary">
         <span class="sr-only">Ajustar contador</button>
-      <button class="ph ph-stop-circle secondary">
-        <span class="sr-only">Reiniar contador
+
+      <button data-action="reset" class="ph ph-stop-circle secondary">
+        <span class="sr-only">Reiniciar contador
           </span>
         </button>
-      <button class="ph ph-speaker-none secondary">
+      <button data-action="toggle-music" class="ph ph-speaker-none secondary">
         <span class="sr-only">Inciar música</span>
         </button>
-      <button class="ph ph-speaker-high">
+      <button data-action="toggle-music" class="ph ph-speaker-high">
         <span class="sr-only">Parar música</span></button>
     </section>
 
